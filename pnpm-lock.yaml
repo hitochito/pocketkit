@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/grandstander':
+        specifier: ^5.0.22
+        version: 5.0.22
       iconify-icon:
         specifier: ^2.1.0
         version: 2.1.0
@@ -240,6 +243,9 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/grandstander@5.0.22':
+    resolution: {integrity: sha512-f00A74dBlABY3g/cUf+TQYK4uYcK3B9ryg+RGOJHuH/O2NRuBqfebr1h9/QzlVkyda3rSQmpbOlS58fhYQhcpg==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1622,6 +1628,8 @@ snapshots:
   '@eslint/js@9.9.1': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@fontsource-variable/grandstander@5.0.22': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 

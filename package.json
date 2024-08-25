@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource-variable/grandstander": "^5.0.22",
 		"iconify-icon": "^2.1.0"
 	}
 }
