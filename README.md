@@ -32,20 +32,6 @@ Install Iconify-Icon (Web Component):
 Icon Utility to maintain imports in one place is located at `$components/ui/Icon.svelte`
 Make sure too put this inside `app.css` to avoid layout shift:
 
-```css
-/* Iconify Web component is not rendered instantly. There could be a few milliseconds delay.
-This is caused by JavaScript. Web component cannot be rendered until it is loaded and registered.
-Because of web component spec. Rendering is done asynchronously in browser, often causing a delay.
-This might cause layout shift.
-To avoid layout shift, add this to your CSS:
-*/
-iconify-icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-}
-```
-
 ## 3. Add TailwindCSS
 
 Initialize TailwindCSS
