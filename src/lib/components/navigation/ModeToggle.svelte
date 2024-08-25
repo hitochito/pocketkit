@@ -3,7 +3,7 @@
 	import Icon from '$lib/components/ui/icons/Icon.svelte';
 </script>
 
-<button on:click={toggleMode} class="">
+<button on:click={toggleMode}>
 	{#if $mode === 'light'}
 		<Icon icon="sun" />
 	{:else}
