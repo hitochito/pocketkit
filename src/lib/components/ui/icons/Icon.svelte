@@ -2,7 +2,9 @@
 	import 'iconify-icon';
 
 	const icons = {
-		menu: 'ic:sharp-menu'
+		sun: 'ion:sun',
+		menu: 'ion:menu',
+		moon: 'ion:moon'
 		// Add more icons here as needed
 	} as const;
 	type IconName = keyof typeof icons;
