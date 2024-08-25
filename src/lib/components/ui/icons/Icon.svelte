@@ -2,19 +2,26 @@
 	import 'iconify-icon';
 
 	const icons = {
-		sun: 'ion:sun',
-		menu: 'ion:menu',
-		moon: 'ion:moon'
+		moon: 'ion:moon',
+		sun: 'ion:sunny',
+		menu: 'ion:menu'
 		// Add more icons here as needed
 	} as const;
 	type IconName = keyof typeof icons;
 
 	export let icon: IconName;
-	export let size = '1em';
 	export let color = 'currentColor';
+	export let className: string;
+	export { className as class };
 </script>
 
-<svelte:element this={'iconify-icon'} icon={icons[icon]} {size} {color} {...$$restProps} />
+<svelte:element
+	this={'iconify-icon'}
+	class={className}
+	icon={icons[icon]}
+	{color}
+	{...$$restProps}
+/>
 
 <style lang="postcss">
 	:global(iconify-icon) {
