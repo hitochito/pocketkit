@@ -10,7 +10,6 @@
   # TypeScript
   # Eslint
   # Prettier
-  # Svelte 5 Preview
 
   cd {app_name}
   pnpm install
@@ -22,28 +21,29 @@
   # Finally Host it on Vercel ({app_name}.vercel.app)
 ```
 
-## 2. Add Lucide-Svelte Icon Library & Component
+## 2. Add Iconify- Icon Library & Component
 
-Install Lucide Svelte:
+Install Iconify-Icon (Web Component):
 
 ```shell
-  pnpm install lucide-svelte
+  pnpm install iconify-icon
 ```
 
-Add Icon Utility to maintain imports in one place at `src/lib/utils/icons.ts`
+Icon Utility to maintain imports in one place is located at `$components/ui/Icon.svelte`
+Make sure too put this inside `app.css` to avoid layout shift:
 
-```ts
-import { Moon, Sun } from 'lucide-svelte';
-import type { Component } from 'svelte';
-
-export type Icon = Component;
-
-const Icons = {
-	Moon,
-	Sun
-};
-
-export default Icons;
+```css
+/* Iconify Web component is not rendered instantly. There could be a few milliseconds delay.
+This is caused by JavaScript. Web component cannot be rendered until it is loaded and registered.
+Because of web component spec. Rendering is done asynchronously in browser, often causing a delay.
+This might cause layout shift.
+To avoid layout shift, add this to your CSS:
+*/
+iconify-icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+}
 ```
 
 ## 3. Add TailwindCSS
