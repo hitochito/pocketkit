@@ -30,7 +30,6 @@ Install Iconify-Icon (Web Component):
 ```
 
 Icon Utility to maintain imports in one place is located at `$components/ui/Icon.svelte`
-Make sure too put this inside `app.css` to avoid layout shift:
 
 ## 3. Add TailwindCSS
 
