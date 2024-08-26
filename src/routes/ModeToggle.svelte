@@ -5,9 +5,9 @@
 
 <button on:click={toggleMode}>
 	{#if $mode === 'light'}
-		<Iconify class="text-lg" icon="sun" />
+		<Iconify class="mt-1 text-lg" icon="sun" />
 	{:else}
-		<Iconify class="text-lg" icon="moon" />
+		<Iconify class="mt-1 text-lg" icon="moon" />
 	{/if}
 	<span class="sr-only">Toggle theme</span>
 </button>

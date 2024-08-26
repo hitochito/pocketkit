@@ -1,9 +1,7 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 	import Iconify from '$lib/components/Iconify.svelte';
-	import ModeToggle from '$lib/components/ModeToggle.svelte';
+	import ModeToggle from './ModeToggle.svelte';
 </script>
 
 <header>
