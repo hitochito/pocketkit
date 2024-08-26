@@ -56,15 +56,6 @@
 	}
 	:global(body) {
 		min-height: 100vh;
-		margin: 0;
-		background-attachment: fixed;
-		/* background-color: var(--color-bg-1); */
-		/* background-image: radial-gradient(
-				50% 50% at 50% 50%,
-				rgba(255, 255, 255, 0.75) 0%,
-				rgba(255, 255, 255, 0) 100%
-			),
-			linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%); */
 	}
 	header {
 		display: flex;
@@ -72,8 +63,9 @@
 	}
 
 	.corner {
-		width: 3em;
-		height: 3em;
+		/* width: 3em;
+		height: 3em; */
+		@apply px-2;
 	}
 
 	.corner a {
@@ -84,16 +76,9 @@
 		height: 100%;
 	}
 
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
-
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
 	}
 
 	svg {
@@ -103,7 +88,7 @@
 	}
 
 	path {
-		fill: var(--background);
+		@apply fill-muted;
 	}
 
 	ul {
@@ -115,7 +100,7 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
+		@apply bg-muted;
 		background-size: contain;
 	}
 
@@ -125,15 +110,7 @@
 	}
 
 	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
+		@apply content-[''] w-0 h-0 absolute top-0 left-[calc(50%-6px)] border-[6px] border-solid border-transparent border-t-primary;
 	}
 
 	nav a {
@@ -141,16 +118,12 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 0.5rem;
-		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
+		@apply hover:text-primary;
 	}
 </style>
