@@ -1,26 +1,53 @@
 <script>
+	import Header from './Header.svelte';
 	import '../app.css';
-	import { ModeWatcher } from 'mode-watcher';
-	import { onNavigate } from '$app/navigation';
-	import Navbar from '$lib/components/navigation/Navbar.svelte';
-	import '@fontsource-variable/grandstander'; // weights 100-900;
-
-	// VIEW TRANSITIONS API
-	onNavigate((navigation) => {
-		// @ts-ignore <-- This is a private API so we need to ignore the TS error
-		if (!document.startViewTransition) return;
-
-		return new Promise((resolve) => {
-			// @ts-ignore <-- This is a private API so we need to ignore the TS error
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
-		});
-	});
 </script>
 
-<ModeWatcher />
-<Navbar />
+<div class="app">
+	<Header />
 
-<slot />
+	<main>
+		<slot />
+	</main>
+
+	<footer>
+		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	</footer>
+</div>
+
+<style>
+	.app {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	main {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		width: 100%;
+		max-width: 64rem;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+	}
+
+	footer a {
+		font-weight: bold;
+	}
+
+	@media (min-width: 480px) {
+		footer {
+			padding: 12px 0;
+		}
+	}
+</style>
