@@ -1,10 +1,17 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
-	import Input from '$lib/components/ui/input/input.svelte';
 	import ModeToggle from '$lib/components/navigation/ModeToggle.svelte';
 	import Icon from '$lib/components/ui/icons/Icon.svelte';
 
 	let isMenuOpen = false;
+	$: currentPath = $page.url.pathname;
+
+	const navItems = [
+		{ href: '/', label: 'Home' },
+		{ href: '/about', label: 'About' },
+		{ href: '/services', label: 'Services' },
+		{ href: '/contact', label: 'Contact' }
+	];
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -18,11 +25,12 @@
 			<Icon class="text-2xl" icon="menu" />
 		</button>
 		<div class="hidden md:block">
-			<ul class="flex items-center gap-4">
-				<li class:active={$page.url.pathname === '/'}><a href="/">Home</a></li>
-				<li class:active={$page.url.pathname === '/about'}><a href="/about">About</a></li>
-				<li class:active={$page.url.pathname === '/services'}><a href="/services">Services</a></li>
-				<li class:active={$page.url.pathname === '/contact'}><a href="/contact">Contact</a></li>
+			<ul class="nav-items">
+				{#each navItems as { href, label }}
+					<li class:active={currentPath === href}>
+						<a {href}>{label}</a>
+					</li>
+				{/each}
 				<li><ModeToggle /></li>
 			</ul>
 		</div>
@@ -35,25 +43,17 @@
 			<Icon class="text-2xl" icon="x" />
 		</button>
 		<ul class="menu-items">
-			<li class:active={$page.url.pathname === '/'}><a href="/" on:click={toggleMenu}>Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a href="/about" on:click={toggleMenu}>About</a>
-			</li>
-			<li class:active={$page.url.pathname === '/services'}>
-				<a href="/services" on:click={toggleMenu}>Services</a>
-			</li>
-			<li class:active={$page.url.pathname === '/contact'}>
-				<a href="/contact" on:click={toggleMenu}>Contact</a>
-			</li>
+			{#each navItems as { href, label }}
+				<li class:active={currentPath === href}>
+					<a {href} on:click={toggleMenu}>{label}</a>
+				</li>
+			{/each}
 			<li><ModeToggle /></li>
 		</ul>
 	</div>
 {/if}
 
 <style lang="postcss">
-	.navbar {
-		@apply px-5 py-2;
-	}
 	.navbar-content {
 		@apply flex flex-wrap justify-between items-center;
 	}
@@ -84,5 +84,9 @@
 
 	.menu-items li {
 		@apply text-center;
+	}
+
+	.nav-items {
+		@apply text-lg flex-row w-auto items-center gap-2;
 	}
 </style>
