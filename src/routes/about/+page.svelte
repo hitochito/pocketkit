@@ -3,7 +3,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="text-column">
+<section>
 	<h1>About this app</h1>
 
 	<p>
@@ -23,16 +23,22 @@
 		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
 		using it with JavaScript disabled!
 	</p>
-</div>
+</section>
 
-<style>
+<style lang="postcss">
+	h1 {
+		@apply text-3xl text-center font-bold mb-4;
+	}
+
+	p {
+		@apply mb-4;
+	}
+
+	a {
+		@apply text-blue-600 hover:underline;
+	}
+
 	pre {
-		font-size: 16px;
-		background-color: rgba(255, 255, 255, 0.45);
-		border-radius: 3px;
-		box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-		padding: 0.5em;
-		overflow-x: auto;
-		color: var(--color-text);
+		@apply text-base bg-white bg-opacity-45 rounded shadow-md p-2 overflow-x-auto text-gray-800 mb-4 w-full;
 	}
 </style>
