@@ -355,3 +355,8 @@ export default config;
 
 Some Default Components & Utilities Are Added In `src/lib` directory.
 Make sure to copy them over or make your own to copy this boilerplate.
+
+## 7. Navigation Config
+
+Navigation Config is located at `src/lib/config/navigation.ts`
+All the routes & navigation items are defined here. And the main Navbar Component is located at `src/lib/components/navigation/Navbar.svelte`. Modifiy them as needed to fit your needs.
