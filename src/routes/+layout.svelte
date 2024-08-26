@@ -1,4 +1,5 @@
 <script>
+	import '@fontsource-variable/grandstander'; // weights 100-900;
 	import Header from './Header.svelte';
 	import '../app.css';
 </script>
