@@ -5,7 +5,9 @@
 		moon: 'lucide:moon',
 		sun: 'lucide:sun',
 		x: 'lucide:x',
-		menu: 'lucide:menu'
+		menu: 'lucide:menu',
+		svelte: 'logos:svelte-icon',
+		github: 'logos:github-icon'
 		// Add more icons here as needed
 	} as const;
 	type IconName = keyof typeof icons;
@@ -31,7 +33,7 @@
 		Because of web component spec. Rendering is done asynchronously in browser, often causing a delay.
 		This might cause layout shift. To avoid layout shift, add this to your CSS: */
 		display: inline-block;
-		vertical-align: -0.19em; /* https://iconify.design/docs/iconify-icon/inline.html */
+		vertical-align: -0.19em; /* default: -0.125em https://iconify.design/docs/iconify-icon/inline.html */
 		width: 1em;
 		height: 1em;
 	}
