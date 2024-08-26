@@ -2,7 +2,7 @@
 	import Navbar from '$lib/components/navigation/Navbar.svelte';
 </script>
 
-<main class="container mx-auto">
+<main>
 	<p class="text-justify">
 		startinggggggggggggg Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit blanditiis
 		officiis eaque tenetur ut hic laudantium pariatur praesentium, veritatis sint earum voluptates
