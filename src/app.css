@@ -74,6 +74,7 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+		@apply max-w-3xl mx-auto p-4 md:p-6 lg:p-8;
 	}
 }
 
