@@ -2,7 +2,10 @@
 	import '@fontsource-variable/grandstander'; // weights 100-900;
 	import Header from './Header.svelte';
 	import '../app.css';
+	import { ModeWatcher } from 'mode-watcher';
 </script>
+
+<ModeWatcher />
 
 <div class="app">
 	<Header />

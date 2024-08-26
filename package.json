@@ -35,6 +35,11 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/grandstander": "^5.0.22",
-		"iconify-icon": "^2.1.0"
+		"bits-ui": "^0.21.13",
+		"clsx": "^2.1.1",
+		"iconify-icon": "^2.1.0",
+		"mode-watcher": "^0.4.1",
+		"tailwind-merge": "^2.5.2",
+		"tailwind-variants": "^0.2.1"
 	}
 }
