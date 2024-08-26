@@ -2,12 +2,14 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import Iconify from '$lib/components/Iconify.svelte';
+	import ModeToggle from '$lib/components/ModeToggle.svelte';
 </script>
 
 <header>
 	<div class="corner">
 		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+			<Iconify class="text-3xl" icon="svelte" />
 		</a>
 	</div>
 
@@ -33,10 +35,12 @@
 
 	<div class="corner">
 		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+			<Iconify class="text-3xl bg-white rounded-full" icon="github" />
 		</a>
 	</div>
 </header>
+
+<ModeToggle />
 
 <style lang="postcss">
 	:global(:root) {
@@ -54,14 +58,13 @@
 		min-height: 100vh;
 		margin: 0;
 		background-attachment: fixed;
-		background-color: var(--color-bg-1);
-		background-size: 100vw 100vh;
-		background-image: radial-gradient(
+		/* background-color: var(--color-bg-1); */
+		/* background-image: radial-gradient(
 				50% 50% at 50% 50%,
 				rgba(255, 255, 255, 0.75) 0%,
 				rgba(255, 255, 255, 0) 100%
 			),
-			linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+			linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%); */
 	}
 	header {
 		display: flex;
