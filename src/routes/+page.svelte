@@ -32,19 +32,7 @@
 		voluptatum, quae quod. Dolore fugit omnis quisquam suscipit ullam nemo vitae delectus quae
 		explicabo asperiores velit cupiditate, distinctio repellat sapiente natus nostrum consequuntur
 		laborum sit tempora earum rem! Aut eveniet architecto minima, odit sunt nulla reiciendis quae,
-		sint accusantium temporibus excepturi itaque consectetur facere explicabo, nobis maiores
-		voluptatem magni quasi aliquid libero autem et. Quo velit commodi alias deleniti eaque fugit,
-		esse excepturi vero ullam, a aspernatur voluptatum dolor adipisci, cupiditate accusantium
-		impedit iusto? Nostrum dolorum aliquam quam delectus expedita animi facilis inventore numquam,
-		eos qui dolorem reiciendis perspiciatis hic, quos, dicta reprehenderit. Explicabo distinctio
-		voluptate incidunt veritatis? Cum repellat iure obcaecati a in eos saepe soluta distinctio id
-		vitae nobis ipsa, tempora nostrum nihil ex, odio impedit aperiam et provident neque ab. Veniam
-		voluptatibus similique ipsam quasi! Fuga a quam itaque amet possimus soluta neque laboriosam,
-		repellendus, quisquam eaque quis. Delectus quo dolore inventore molestias neque, consequatur
-		eligendi ab harum tempore labore velit repellat libero. Odit qui repellat facere? Omnis placeat
-		qui eveniet, perspiciatis dignissimos, nobis et exercitationem rerum illo repellendus non itaque
-		maiores ea maxime fugit delectus laboriosam temporibus voluptates nulla. Sit architecto atque
-		suscipit quod delectus culpa quibusdam asperiores iusto totam aliquid, aut eos saepe eveniet,
-		maxime quaerat quo eum distinctio obcaecati, ea tempora! Reprehenderit, nam inventore! ENDINGGGG
+		sint accusantium temporibus excepturi itaque consectetur facere explicabo, nobis maiores maxime
+		quaerat quo eum distinctio obcaecati, ea tempora! Reprehenderit, nam inventore! ENDINGGGG
 	</p>
 </main>

@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import ModeToggle from '$lib/components/navigation/ModeToggle.svelte';
 	import Icon from '$lib/components/ui/icons/Icon.svelte';
+	import { fade } from 'svelte/transition';
 
 	let isMenuOpen = false;
 	$: currentPath = $page.url.pathname;
@@ -38,7 +39,7 @@
 </nav>
 
 {#if isMenuOpen}
-	<div class="fullscreen-menu">
+	<div class="fullscreen-menu" transition:fade={{ duration: 200 }}>
 		<button class="close-button" on:click={toggleMenu}>
 			<Icon class="text-2xl" icon="x" />
 		</button>
