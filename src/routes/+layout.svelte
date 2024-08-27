@@ -16,21 +16,12 @@
 	<Footer />
 </div>
 
-<style>
+<style lang="postcss">
 	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
+		@apply min-h-screen flex flex-col;
 	}
 
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
+		@apply flex flex-1 flex-col p-5 w-full max-w-4xl mx-auto;
 	}
 </style>

@@ -1,23 +1,15 @@
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p>
+		visit <a target="_blank" href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
+	</p>
 </footer>
 
 <style lang="postcss">
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+		@apply flex flex-col justify-center items-center p-2;
 	}
 
 	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+		@apply font-bold underline text-primary;
 	}
 </style>
