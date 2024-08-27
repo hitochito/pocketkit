@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import Iconify from '$lib/components/Iconify.svelte';
-	import ModeToggle from './ModeToggle.svelte';
 </script>
 
 <header>
@@ -37,8 +36,6 @@
 		</a>
 	</div>
 </header>
-
-<ModeToggle />
 
 <style lang="postcss">
 	header {

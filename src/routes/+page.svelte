@@ -1,6 +1,7 @@
 <script>
 	import welcome from '$lib/images/welcome.webp';
 	import Iconify from '$lib/components/Iconify.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <svelte:head>
@@ -8,11 +9,11 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<div class="welcome-container">
-		<img src={welcome} alt="Welcome" class="welcome-image" />
-		<h1>Welcome to PocketKit <Iconify icon="smile" /></h1>
-	</div>
+<section class="welcome-container">
+	<img src={welcome} alt="Welcome" class="welcome-image" />
+	<h1>Welcome to PocketKit <Iconify icon="smile" /></h1>
+	<p>A PocketBase x SvelteKit Starter Kit</p>
+	<Button href="https://github.com/hitochito/pocketkit/blob/main/README.md	">Get Started</Button>
 </section>
 
 <style lang="postcss">
@@ -21,9 +22,9 @@
 	}
 
 	.welcome-container {
-		@apply flex flex-col items-center justify-center;
+		@apply flex flex-col gap-2 items-center justify-center;
 	}
 	h1 {
-		@apply mt-0 text-2xl font-bold;
+		@apply text-2xl font-bold;
 	}
 </style>
