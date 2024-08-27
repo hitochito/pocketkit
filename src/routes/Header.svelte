@@ -1,6 +1,13 @@
 <script>
 	import { page } from '$app/stores';
 	import Iconify from '$lib/components/Iconify.svelte';
+	import a from '$lib/components/ui/button/button.svelte';
+
+	const navItems = [
+		{ href: '/', label: 'Home' },
+		{ href: '/about', label: 'About' },
+		{ href: '/sverdle', label: 'Sverdle' }
+	];
 </script>
 
 <header>
@@ -15,15 +22,16 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
+			{#each navItems as { href, label }}
+				<li
+					aria-current={$page.url.pathname === href ||
+					($page.url.pathname.startsWith(href) && href !== '/')
+						? 'page'
+						: undefined}
+				>
+					<a {href}>{label}</a>
+				</li>
+			{/each}
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -39,33 +47,23 @@
 
 <style lang="postcss">
 	header {
-		display: flex;
-		justify-content: space-between;
+		@apply flex justify-between;
 	}
 
 	.corner {
-		/* width: 3em;
-		height: 3em; */
 		@apply px-2;
 	}
 
 	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
+		@apply flex items-center justify-center w-full h-full;
 	}
 
 	nav {
-		display: flex;
-		justify-content: center;
+		@apply flex justify-center;
 	}
 
 	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
+		@apply w-8 h-12 block;
 	}
 
 	path {
@@ -73,21 +71,11 @@
 	}
 
 	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		@apply bg-muted;
-		background-size: contain;
+		@apply relative p-0 m-0 h-12 flex justify-center items-center list-none bg-muted bg-contain;
 	}
 
 	li {
-		position: relative;
-		height: 100%;
+		@apply relative h-full;
 	}
 
 	li[aria-current='page']::before {
@@ -95,16 +83,6 @@
 	}
 
 	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-		@apply hover:text-primary;
+		@apply flex h-full items-center px-2 font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
 	}
 </style>
