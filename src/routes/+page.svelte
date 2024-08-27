@@ -1,5 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/welcome.webp';
 	import Iconify from '$lib/components/Iconify.svelte';
 </script>
@@ -13,7 +12,6 @@
 	<div class="welcome-container">
 		<img src={welcome} alt="Welcome" class="welcome-image" />
 		<h1>Welcome to PocketKit <Iconify icon="smile" /></h1>
-		<Counter />
 	</div>
 </section>
 
@@ -26,6 +24,6 @@
 		@apply flex flex-col items-center justify-center;
 	}
 	h1 {
-		@apply mt-0 text-3xl font-bold;
+		@apply mt-0 text-2xl font-bold;
 	}
 </style>

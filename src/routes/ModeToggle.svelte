@@ -14,6 +14,6 @@
 
 <style lang="postcss">
 	button {
-		@apply fixed bottom-5 right-5 rounded px-2 py-1 bg-muted text-foreground;
+		@apply fixed bottom-2 right-2 rounded px-2 py-1 bg-muted text-foreground;
 	}
 </style>
