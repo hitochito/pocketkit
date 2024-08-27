@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import Iconify from '$lib/components/Iconify.svelte';
-	import a from '$lib/components/ui/button/button.svelte';
 
 	const navItems = [
 		{ href: '/', label: 'Home' },
