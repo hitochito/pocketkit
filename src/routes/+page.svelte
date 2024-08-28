@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Iconify from '$lib/components/Iconify.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
+	import { Button, Iconify } from '$lib/components';
 	import { CldImage } from 'svelte-cloudinary';
 </script>
 

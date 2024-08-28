@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { toggleMode, mode } from 'mode-watcher';
-	import Iconify from '$lib/components/Iconify.svelte';
+	import { Iconify } from '$lib/components';
 </script>
 
 <button on:click={toggleMode}>
