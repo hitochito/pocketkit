@@ -1,5 +1,6 @@
 <script lang="ts">
 	import 'iconify-icon';
+	import { IconifyIconComponent } from 'iconify-icon';
 
 	const icons = {
 		moon: 'lucide:moon',
@@ -8,7 +9,9 @@
 		menu: 'lucide:menu',
 		svelte: 'logos:svelte-icon',
 		github: 'logos:github-icon',
-		smile: 'twemoji:grinning-face-with-smiling-eyes'
+		smile: 'twemoji:grinning-face-with-smiling-eyes',
+		rocket: 'ic:round-rocket-launch',
+		book: 'clarity:book-solid'
 		// Add more icons here as needed
 	} as const;
 	type IconName = keyof typeof icons;
@@ -19,13 +22,14 @@
 	export { className as class };
 </script>
 
-<svelte:element
+<!-- <svelte:element
 	this={'iconify-icon'}
 	class={className}
 	icon={icons[icon]}
 	{color}
 	{...$$restProps}
-/>
+/> -->
+<iconify-icon class={className} icon={icons[icon]} {color} {...$$restProps} />
 
 <style lang="postcss">
 	:global(iconify-icon) {
