@@ -1,7 +1,7 @@
-<script>
-	import welcome from '$lib/images/welcome.webp?enhanced';
+<script lang="ts">
 	import Iconify from '$lib/components/Iconify.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import { Image } from '@unpic/svelte';
 </script>
 
 <svelte:head>
@@ -10,7 +10,14 @@
 </svelte:head>
 
 <section class="welcome-container">
-	<enhanced:img src={welcome} alt="Welcome to PocketKit" class="welcome-image" />
+	<Image
+		src="https://i.ibb.co/n6GM3rt/welcome.webp"
+		alt="Welcome to PocketKit"
+		fetchpriority="high"
+		loading="eager"
+		height={300}
+		width={300}
+	/>
 	<h1>Welcome to PocketKit <Iconify icon="smile" /></h1>
 	<p>A PocketBase x SvelteKit Starter Kit</p>
 	<Button href="https://github.com/hitochito/pocketkit/blob/main/README.md">Get Started</Button>

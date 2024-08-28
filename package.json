@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/grandstander": "^5.0.22",
+		"@unpic/svelte": "^0.0.53",
 		"bits-ui": "^0.21.13",
 		"clsx": "^2.1.1",
 		"iconify-icon": "^2.1.0",
