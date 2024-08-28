@@ -355,6 +355,7 @@ export default config;
 
 Some Default Components & Utilities Are Added In `src/lib` directory.
 Make sure to copy them over or make your own to copy this boilerplate.
+Also when you create new components, make sure to use the `index.ts` file to export them. This is to make the imports more organized and easier to manage. Check `$lib/components/index.ts` for reference.
 
 ## 7. Navigation Config
 
