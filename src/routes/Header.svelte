@@ -11,7 +11,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a href="https://kit.svelte.dev" aria-label="SvelteKit" target="_blank">
 			<Iconify class="text-3xl" icon="svelte" />
 		</a>
 	</div>
@@ -38,7 +38,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/sveltejs/kit" target="_blank" aria-label="GitHub">
 			<Iconify class="text-3xl bg-white rounded-full" icon="github" />
 		</a>
 	</div>

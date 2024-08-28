@@ -13,7 +13,7 @@
 	<img src={welcome} alt="Welcome" class="welcome-image" />
 	<h1>Welcome to PocketKit <Iconify icon="smile" /></h1>
 	<p>A PocketBase x SvelteKit Starter Kit</p>
-	<Button href="https://github.com/hitochito/pocketkit/blob/main/README.md	">Get Started</Button>
+	<Button href="https://github.com/hitochito/pocketkit/blob/main/README.md">Get Started</Button>
 </section>
 
 <style lang="postcss">
