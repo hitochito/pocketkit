@@ -1,14 +1,8 @@
-<script>
-	import ModeToggle from './ModeToggle.svelte';
-</script>
-
 <footer>
 	<p>
 		visit <a target="_blank" href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
 	</p>
 </footer>
-
-<ModeToggle />
 
 <style lang="postcss">
 	footer {
