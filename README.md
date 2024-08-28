@@ -397,10 +397,49 @@ For Other Images, `@unpic/svelte` is used. It's a CDN-agnostic library with supp
 
 ## 9. Icons
 
-For Icons, `iconify-icon` is used. It's a webcomponent library that provides a large number of icons that can be used in your Svelte templates. I have created a wrapper component for it at `$lib/components/Iconify.svelte` to make it more SvelteKit friendly. You can use ssr and all the other features of SvelteKit with it. One thing to note though is that you need to import the icons as variables and use them in the `icon` prop. Also if you're creating an web app that needs to work offline, you might want to use the `iconify-icon/svelte` library instead. `iconify-icon` loads the icons asynchronously and requires a CDN to work, then it caches the icons in the browser's local storage, so it's not really the best solution for web apps that need to work offline. Learn more [here]](https://icon-sets.iconify.design/)
+For Icons, `iconify-icon` is used. It's a webcomponent library that provides a large number of icons that can be used in your Svelte templates. I have created a wrapper component for it at `$lib/components/Iconify.svelte` to make it more SvelteKit friendly. You can use ssr and all the other features of SvelteKit with it. One thing to note though is that you need to import the icons as variables and use them in the `icon` prop. Also if you're creating an web app that needs to work offline, you might want to use the `iconify-icon/svelte` library instead. `iconify-icon` loads the icons asynchronously and requires a CDN to work, then it caches the icons in the browser's local storage, so it's not really the best solution for web apps that need to work offline. Learn more [here](https://icon-sets.iconify.design/)
 
 ```svelte
 <script lang="ts">
 	import { Icon } from '$lib/components/Iconify.svelte';
 </script>
 ```
+
+## 10. Bundle Analysis
+
+This project uses `rollup-plugin-visualizer` to generate a visual representation of the bundle size. This helps in analyzing and optimizing the application's performance.
+
+### How to Use
+
+1. The visualizer is configured in `vite.config.ts`.
+
+2. To generate the bundle analysis, run the build command:
+
+   ```shell
+   pnpm build
+   ```
+
+3. After the build completes, a file named `bundle-analysis.html` will be generated in the `./stats` directory.
+
+4. Open this file in a web browser to view the bundle analysis.
+
+### Configuration
+
+The visualizer is configured with the following options:
+
+- `open: true`: Automatically opens the analysis in your default browser after build.
+- `filename: './stats/bundle-analysis.html'`: Specifies the output location and filename.
+
+You can modify these options in `vite.config.ts` if needed.
+
+### Interpreting the Results
+
+The bundle analysis provides a treemap visualization of your application's bundle size. Each rectangle represents a module, and its size corresponds to the module's relative size in the bundle.
+
+Use this information to:
+
+- Identify large dependencies
+- Find opportunities for code splitting
+- Optimize imports and reduce bundle size
+
+Remember to analyze the results in the context of your application's specific needs and performance goals.
