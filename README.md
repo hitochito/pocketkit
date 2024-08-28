@@ -373,26 +373,25 @@ For Static Images, `@sveltejs/enhanced-img` vite plugin is used. you may use Vit
 <enhanced:img src={welcome} alt="Welcome to PocketKit" />
 ```
 
-For Other Images, `@unpic/svelte` is used. It's a CDN-agnostic library with support for a large number of providers.
+For Other Images, `svelte/cloudinary` is used. you need to setup the environment variable. Insert the following variable into your .env.local or .env file (copy from cloudinary console). Learn More [Here](https://svelte.cloudinary.dev/installation/):
+
+```js
+VITE_PUBLIC_CLOUDINARY_CLOUD_NAME = '[Your Cloud Name]';
+```
 
 ```svelte
 <script lang="ts">
-	import { Image } from '@unpic/svelte';
+	import { CldImage } from 'svelte-cloudinary';
 </script>
 
-	<Image
-		src="https://i.ibb.co/n6GM3rt/welcome.webp"
-		alt="Welcome to PocketKit"
-
-		<!-- For High Priority Images -->
-		fetchpriority="high"
-		<!-- Loads Image Immediately -->
-		loading="eager"
-
-		<!-- Width & Height are required -->
-		width={800}
-		height={600}
-	/>
+<CldImage
+	height={300}
+	width={300}
+	loading="eager"
+	src="welcome_di5edv"
+	fetchpriority="high"
+	alt="Welcome to PocketKit"
+/>
 ```
 
 ## 9. Icons

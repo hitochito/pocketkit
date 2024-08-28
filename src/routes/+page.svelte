@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Iconify from '$lib/components/Iconify.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { Image } from '@unpic/svelte';
+	import { CldImage } from 'svelte-cloudinary';
 </script>
 
 <svelte:head>
@@ -10,13 +10,13 @@
 </svelte:head>
 
 <section class="flex flex-col gap-2 items-center justify-center">
-	<Image
-		src="https://i.ibb.co/n6GM3rt/welcome.webp"
-		alt="Welcome to PocketKit"
-		fetchpriority="high"
-		loading="eager"
+	<CldImage
 		height={300}
 		width={300}
+		loading="eager"
+		src="welcome_di5edv"
+		fetchpriority="high"
+		alt="Welcome to PocketKit"
 	/>
 	<h1 class="text-2xl font-bold">Welcome to PocketKit <Iconify icon="smile" /></h1>
 	<p>A PocketBase x SvelteKit Starter Kit</p>
