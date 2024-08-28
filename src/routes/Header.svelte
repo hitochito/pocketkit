@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import { navigating } from '$app/stores';
 	import Iconify from '$lib/components/Iconify.svelte';
 
 	const navItems = [
@@ -9,10 +8,6 @@
 		{ href: '/sverdle', label: 'Sverdle' }
 	];
 </script>
-
-{#if $navigating}
-	<div class="progress-bar" />
-{/if}
 
 <header>
 	<div class="corner">
@@ -88,22 +83,5 @@
 
 	nav a {
 		@apply flex h-full items-center px-2 font-bold text-xs uppercase tracking-widest no-underline transition-colors duration-200 ease-linear hover:text-primary;
-	}
-
-	.progress-bar {
-		@apply fixed z-50 bottom-0 left-0 w-full h-1 bg-primary;
-		animation: progress-bar-animation 2s infinite;
-	}
-
-	@keyframes progress-bar-animation {
-		0% {
-			width: 0%;
-		}
-		50% {
-			width: 70%;
-		}
-		100% {
-			width: 100%;
-		}
 	}
 </style>
