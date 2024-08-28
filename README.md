@@ -360,3 +360,47 @@ Make sure to copy them over or make your own to copy this boilerplate.
 
 Navigation Config is located at `src/lib/config/navigation.ts`
 All the routes & navigation items are defined here. And the main Navbar Component is located at `src/routes/Navbar.svelte`. Modifiy them as needed to fit your needs.
+
+## 8. Enhanced Image
+
+For Static Images, `@sveltejs/enhanced-img` vite plugin is used. you may use Vite's built-in handling to provide images for `<meta>` tags, display images on your homepage with `<enhanced:img>` or use the `enhanced:img` directive in your Svelte templates.
+
+```svelte
+<script lang="ts">
+	import welcome from '$lib/images/welcome.webp?enhanced';
+</script>
+
+<enhanced:img src={welcome} alt="Welcome to PocketKit" />
+```
+
+For Other Images, `@unpic/svelte` is used. It's a CDN-agnostic library with support for a large number of providers.
+
+```svelte
+<script lang="ts">
+	import { Image } from '@unpic/svelte';
+</script>
+
+	<Image
+		src="https://i.ibb.co/n6GM3rt/welcome.webp"
+		alt="Welcome to PocketKit"
+
+		<!-- For High Priority Images -->
+		fetchpriority="high"
+		<!-- Loads Image Immediately -->
+		loading="eager"
+
+		<!-- Width & Height are required -->
+		width={800}
+		height={600}
+	/>
+```
+
+## 9. Icons
+
+For Icons, `iconify-icon` is used. It's a webcomponent library that provides a large number of icons that can be used in your Svelte templates. I have created a wrapper component for it at `$lib/components/Iconify.svelte` to make it more SvelteKit friendly. You can use ssr and all the other features of SvelteKit with it. One thing to note though is that you need to import the icons as variables and use them in the `icon` prop. Also if you're creating an web app that needs to work offline, you might want to use the `iconify-icon/svelte` library instead. `iconify-icon` loads the icons asynchronously and requires a CDN to work, then it caches the icons in the browser's local storage, so it's not really the best solution for web apps that need to work offline. Learn more [here]](https://icon-sets.iconify.design/)
+
+```svelte
+<script lang="ts">
+	import { Icon } from '$lib/components/Iconify.svelte';
+</script>
+```
