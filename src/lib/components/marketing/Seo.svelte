@@ -21,4 +21,4 @@
 	<meta name="twitter:description" content={description} />
 </svelte:head>
 
-<CldOgImage {title} {src} twitterTitle={title} height={1200} width={630} />
+<CldOgImage {title} {src} twitterTitle={title} height={630} width={1200} />
