@@ -17,6 +17,8 @@
 <Seo
 	title="Sverdle Characters"
 	src={images.welcome}
+	width={300}
+	height={300}
 	description="Dynamically load characters from an API using a load function of SvelteKit"
 />
 

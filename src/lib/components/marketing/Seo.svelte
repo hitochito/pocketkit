@@ -6,6 +6,8 @@
 	export let description =
 		'A SvelteKit x PocketBase starter kit for rapid web application development';
 	export let src = images.ogImageHome;
+	export let height = 630;
+	export let width = 1200;
 </script>
 
 <svelte:head>
@@ -21,4 +23,4 @@
 	<meta name="twitter:description" content={description} />
 </svelte:head>
 
-<CldOgImage {title} {src} twitterTitle={title} height={630} width={1200} />
+<CldOgImage {title} {src} twitterTitle={title} {height} {width} />
