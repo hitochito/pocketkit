@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '@fontsource-variable/grandstander'; // weights 100-900;
-	import { Header, Footer, ModeToggle } from '$lib/components';
+	import { Header, Footer, ModeToggle, LoadingSpinner } from '$lib/components';
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
 
@@ -8,6 +8,7 @@
 	import { navigating } from '$app/stores';
 	import '$lib/utils/nprogress/nprogress.css';
 	import NProgress from '$lib/utils/nprogress/nprogress';
+
 	NProgress.configure({
 		minimum: 0.56,
 		showSpinner: false
@@ -22,13 +23,15 @@
 
 <ModeWatcher />
 
-<div class="app">
-	<Header />
-	<main>
-		<slot />
-	</main>
-	<Footer />
-</div>
+<LoadingSpinner>
+	<div class="app">
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</div>
+</LoadingSpinner>
 
 <ModeToggle />
 
