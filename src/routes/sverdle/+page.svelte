@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Seo } from '$lib/components';
+	import { images } from '$lib/assets/index';
 	export let data;
 	$: characters = data?.characters;
 </script>
@@ -11,6 +13,12 @@
 		</div>
 	{/each}
 </div>
+
+<Seo
+	title="Sverdle Characters"
+	src={images.welcome}
+	description="Dynamically load characters from an API using a load function of SvelteKit"
+/>
 
 <style lang="postcss">
 	.character-container {
