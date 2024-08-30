@@ -1,6 +1,5 @@
 <script lang="ts">
 	import 'iconify-icon';
-	import { IconifyIconComponent } from 'iconify-icon';
 
 	const icons = {
 		moon: 'lucide:moon',

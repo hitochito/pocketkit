@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button, Iconify } from '$lib/components';
 	import { CldImage } from 'svelte-cloudinary';
+	import { images } from '$lib/assets/index';
 </script>
 
 <svelte:head>
@@ -13,7 +14,7 @@
 		height={300}
 		width={300}
 		loading="eager"
-		src="welcome_di5edv"
+		src={images.welcome}
 		fetchpriority="high"
 		alt="Welcome to PocketKit"
 	/>
