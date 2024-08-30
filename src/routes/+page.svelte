@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Button, Iconify } from '$lib/components';
+	import { Button, Iconify, Seo } from '$lib/components';
 	import { CldImage } from 'svelte-cloudinary';
 	import { images } from '$lib/assets/index';
-	import Seo from '$lib/components/marketing/Seo.svelte';
 </script>
 
 <section class="flex flex-col gap-2 items-center justify-center">
