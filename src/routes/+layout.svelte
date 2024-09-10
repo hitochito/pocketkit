@@ -22,17 +22,13 @@
 </script>
 
 <ModeWatcher />
-
-<LoadingSpinner>
-	<div class="app">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</div>
-</LoadingSpinner>
-
+<div class="app">
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</div>
 <ModeToggle />
 
 <style lang="postcss">

@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Seo } from '$lib/components';
 	import { images } from '$lib/assets/index';
+
 	export let data;
+
 	$: characters = data?.characters;
 </script>
 
